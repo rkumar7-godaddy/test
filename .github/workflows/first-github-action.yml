@@ -2,13 +2,14 @@ name: Unit Tests
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.10
+          python-version: "3.10"
+          architecture: "x64"
       - uses: actions/checkout@v3
       - name: List contents of directory
         run: ls -al
