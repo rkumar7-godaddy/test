@@ -11,9 +11,11 @@ class TestBasicMethods(unittest.TestCase):
         self.assertEqual(add(5, 7), 12)
         self.assertEqual(add(3, 0), 3)
         self.assertEqual(add(23, 77), 100)
+        self.assertEqual(add(35, -4), 31)
     
     # testing the subtract method
     def test_subtract(self):
-        self.assertEqual(add(10, 2), 8)
-        self.assertEqual(add(0, 4), -4)
-        self.assertEqual(add(31, 31), 0)
+        self.assertEqual(subtract(10, 2), 8)
+        self.assertEqual(subtract(0, 4), -4)
+        self.assertEqual(subtract(31, 31), 0)
+        self.assertEqual(subtract(21, -3), 24)
