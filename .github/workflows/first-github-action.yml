@@ -1,0 +1,11 @@
+name: run-unit-tests
+on: [push]
+jobs:
+  list-file-contents:
+    runs-on: ubuntu-latest
+    steps:
+      run: ls -al
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      run: python3 test_functions.py
