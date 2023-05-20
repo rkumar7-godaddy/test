@@ -18,7 +18,7 @@ jobs:
       - name: List contents of directory
         run: ls -al
       - name: Run Unit Tests
-        run: python3 -m unittest test_functions.py
+        run: python3 -m unittest Challenge-1/test_functions.py
       - name: Build Docker Container
         run: docker build -t test-container:1.0
       - name: Run Docker Container
