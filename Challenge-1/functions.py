@@ -11,6 +11,3 @@ def subtract(a: int, b: int) -> int:
     # print("Subtracting", a, "and", b)
     # return difference between a and b
     return a - b
-
-
-print(add(3, 5))

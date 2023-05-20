@@ -1,5 +1,9 @@
 name: Unit Tests
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -15,4 +19,9 @@ jobs:
         run: ls -al
       - name: Run Unit Tests
         run: python3 -m unittest test_functions.py
+      - name: Build Docker Container
+        run: docker build -t test-container:1.0
+      - name: Run Docker Container
+        run: docker run test-container:1.0
+
 
